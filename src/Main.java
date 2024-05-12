@@ -1,26 +1,8 @@
-import Decorator.Starbuzz.*;
-import Decorator.Starbuzz.DarkRoast;
-import Decorator.Starbuzz.Decaf;
-import Decorator.Starbuzz.Espresso;
-import Decorator.Starbuzz.Mocha;
-import Decorator.Starbuzz.Soy;
-import Decorator.Starbuzz.Whip;
 
 public class Main {
     public static void main(String[] args) {
-        Beverage beverage = new Espresso();
-        System.out.println(beverage.getDescription() + " $" + beverage.cost());
-
-        Beverage beverage1 = new DarkRoast();
-        beverage1 = new Mocha(beverage1);
-        beverage1 = new Mocha(beverage1);
-        beverage1 = new Whip(beverage1);
-        System.out.println(beverage1.getDescription() + " $" + beverage1.cost());
-
-        Beverage beverage2 = new Decaf();
-        beverage2 = new Soy(beverage2);
-        beverage2 = new Mocha(beverage2);
-        beverage2 = new Whip(beverage2);
-        System.out.println(beverage2.getDescription() + " $" + beverage2.cost());
+        System.out.println("Adapter Pattern은 하나의 인터페이스를 다른 인터페이스로 변환하는 데 사용합니다.");
+        System.out.println("Facade Pattern은 인터페이스를 간단하게 변경하는 패턴입니다.");
+        System.out.println("Decorator Pattern은 인터페이스는 바꾸지 않고 책임(기능)만을 추가합니다.");
     }
 }
